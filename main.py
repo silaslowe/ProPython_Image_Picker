@@ -1,16 +1,20 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+class FirstScreen(Screen):
+    def search_image(self):
+        pass
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class RootWidget(ScreenManager):
+    pass
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+class MainApp(App):
+
+    def build(self):
+        return RootWidget()
+
+
+MainApp().run()
